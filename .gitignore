@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Django
+*.sqlite3
+staticfiles/
+media/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+
+# Env files (keep .env.production — it has VITE_ prefix, safe to commit)
+.env
+.env.local
+*.env.secret
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
