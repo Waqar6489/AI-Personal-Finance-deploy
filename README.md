@@ -14,9 +14,9 @@
 
 ---
 
-## 🧠 Project Overview
+## Project Overview
 
-An AI-powered personal finance management platform that helps users track income, manage expenses, set budgets, and receive ML-generated insights — built as per the SRS document using the exact tools and technologies specified.
+An AI-powered personal finance management platform that helps users track income, manage expenses, set budgets, and receive ML-generated insights, built as per the SRS document using the exact tools and technologies specified.
 
 ### Tools & Technologies (Per SRS)
 | Layer | Technology |
@@ -37,7 +37,7 @@ An AI-powered personal finance management platform that helps users track income
 
 ---
 
-## 🚀 Setup & Run Instructions
+## Setup & Run Instructions
 
 ### Prerequisites
 - Python 3.10+
