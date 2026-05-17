@@ -1,14 +1,14 @@
-# 🚀 Free Deployment Guide
+# Free Deployment Guide
 ## AI Personal Finance — Render (Backend) + Vercel (Frontend)
 
 ---
 
-## 📋 Overview
+## Overview
 
 | Service | Platform | Cost | URL format |
 |---------|----------|------|------------|
 | Django API | Render.com | FREE | `https://ai-personal-finance.onrender.com` |
-| React App | Vercel.com | FREE | `https://ai-personal-finance.vercel.app` |
+| React App | Vercel.com | FREE | `https://ai-personal-finance-deploy.vercel.app/` |
 | Database | Render PostgreSQL | FREE (90 days) | auto-configured |
 
 ---
@@ -109,32 +109,31 @@ After Vercel gives you a URL, update your Render environment variable:
 
 In Render Dashboard → Your Service → **Environment**:
 ```
-FRONTEND_URL = https://ai-personal-finance.vercel.app
+FRONTEND_URL = https://ai-personal-finance-deploy.vercel.app/
 ```
 Then **Manual Deploy** → **Deploy Latest Commit**.
 
 ---
 
-## ✅ Test Your Live App
+## Test Your Live App
 
-1. Open: `https://ai-personal-finance.vercel.app`
-2. Login with: `admin@finance.pk` / `Admin@2026!`
-3. Add income, expenses, run AI analysis!
+1. Open: `https://ai-personal-finance-deploy.vercel.app/`
+2. Add income, expenses, run AI analysis!
 
 ---
 
-## ⚠️ Important Free Tier Notes
+## Important Free Tier Notes
 
 | Limitation | Details |
 |-----------|---------|
 | **Cold Start** | First request after 15 min idle takes ~60 seconds. Normal! |
-| **Database Expiry** | Free PostgreSQL expires after 90 days — recreate it then |
+| **Database Expiry** | Free PostgreSQL expires after 90 days, recreate it then |
 | **Hours Limit** | 750 free hours/month — enough for a demo/FYP |
 | **Scikit-learn RAM** | May be slow on free tier (512MB RAM). Works fine. |
 
 ---
 
-## 🔄 Update Your Deployed App
+## Update Your Deployed App
 
 Whenever you make changes:
 ```bash
@@ -142,11 +141,11 @@ git add .
 git commit -m "your change description"
 git push
 ```
-Render and Vercel will **auto-redeploy** from GitHub. 🎉
+Render and Vercel will **auto-redeploy** from GitHub.
 
 ---
 
-## 📞 Support Links
+## Support Links
 - Render Docs: https://render.com/docs
 - Vercel Docs: https://vercel.com/docs
 - Django on Render: https://render.com/docs/deploy-django

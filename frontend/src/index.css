@@ -442,7 +442,7 @@ section {
 
 .step {
     flex: 1;
-    min-width: 180px;
+    min-width: 200px;
     max-width: 220px;
     display: flex;
     flex-direction: column;

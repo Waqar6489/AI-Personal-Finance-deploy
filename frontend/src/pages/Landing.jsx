@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { FaReact } from "react-icons/fa";
+
 
 const CAT_EMOJIS = { Food:'🍔', Transport:'🚗', Utilities:'💡', Healthcare:'🏥', Entertainment:'🎭', Education:'📚', Other:'📦' };
 
@@ -32,7 +34,7 @@ export default function Landing() {
           Smart Finance,<br /><span>Powered by AI</span>
         </h1>
         <p className="fade-up" style={{animationDelay:'0.2s'}}>
-          Track income, manage expenses, and get personalized AI insights to achieve your financial goals — all in one intelligent platform built for Pakistan.
+          Track income, manage expenses, and get personalized AI insights to achieve your financial goals, all in one intelligent platform built for Pakistan.
         </p>
         <div className="hero-actions fade-up" style={{animationDelay:'0.3s'}}>
           <Link to="/register" className="btn btn-primary btn-lg" style={{textDecoration: "none"}}>Start Free Today</Link>
@@ -59,12 +61,12 @@ export default function Landing() {
           <div className="section-center">
             <div className="section-tag">What We Offer</div>
             <h2 className="section-title">Everything You Need to <span className="hl">Take Control</span></h2>
-            <p className="section-sub">From tracking to prediction — your complete financial intelligence hub</p>
+            <p className="section-sub">From tracking to prediction, your complete financial intelligence hub</p>
           </div>
           <div className="features-grid">
             {[
               {icon:'🤖', title:'AI-Powered Insights', desc:'Scikit-learn models analyze your spending patterns and generate personalized recommendations like "Reduce food spending by 10% to save Rs. 2,230."'},
-              {icon:'📊', title:'Visual Dashboard', desc:'Beautiful Chart.js-powered dashboards show your income, expenses, and savings trends at a glance — no spreadsheets needed.'},
+              {icon:'📊', title:'Visual Dashboard', desc:'Beautiful Chart.js-powered dashboards show your income, expenses, and savings trends at a glance, no spreadsheets needed.'},
               {icon:'🎯', title:'Budget Tracking', desc:'Set monthly budgets per category and get real-time alerts when you\'re approaching your limits. Stay in control, always.'},
               {icon:'🔮', title:'Expense Prediction', desc:'Our ML model forecasts next month\'s expenses based on your historical behavior, so you can plan ahead with confidence.'},
               {icon:'🔒', title:'Secure & Private', desc:'Django backend with JWT auth, PBKDF2 password hashing, HTTPS/TLS, CSRF protection. Your data is encrypted and isolated.'},
@@ -125,7 +127,7 @@ export default function Landing() {
               <h2 className="section-title">Built by Students, <span className="hl">For Everyone</span></h2>
               <p>AI Personal Finance is a Final Year Project by BSSE students at Riphah International University, Faisalabad Campus, supervised by Mam Mariam Afzal.</p>
               <p>Managing personal finances is difficult due to poor financial awareness and lack of intelligent tools. Our system uses AI libraries (NumPy, Pandas, Scikit-learn) to analyze spending patterns and provide personalized recommendations.</p>
-              <p>The system improves financial awareness and supports better financial decision-making — especially for students and young professionals in Pakistan.</p>
+              <p>The system improves financial awareness and supports better financial decision-making, especially for students and young professionals in Pakistan.</p>
             </div>
             <div>
               <p style={{fontSize:'0.75rem',color:'var(--muted)',textTransform:'uppercase',letterSpacing:'0.1em',marginBottom:'14px'}}>Development Team</p>
@@ -149,7 +151,7 @@ export default function Landing() {
 
       {/* FOOTER */}
       <footer>
-        <div className="footer-text">© 2024 Riphah International University, Faisalabad — BSSE Final Year Project</div>
+        <div className="footer-text">© 2026 Riphah International University, Faisalabad — BSSE Final Year Project</div>
         <a className="nav-logo" href="#" style={{fontSize:'0.9rem'}}>
           <div className="logo-icon" style={{width:28,height:28,fontSize:14}}>💰</div>
           AI Personal Finance
