@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { FaReact } from "react-icons/fa";
 
 
+
 const CAT_EMOJIS = { Food:'🍔', Transport:'🚗', Utilities:'💡', Healthcare:'🏥', Entertainment:'🎭', Education:'📚', Other:'📦' };
 
 export default function Landing() {
@@ -10,7 +11,9 @@ export default function Landing() {
       {/* NAV */}
       <nav className="nav">
         <a className="nav-logo" href="#">
-          <div className="logo-icon">💰</div>
+          <div className="logo-icon">
+            {/* <img src="src/assets/logo.png" alt="logo" /> */}
+          </div>
           <div>
             <div>AI Personal Finance</div>
             <div style={{fontSize:'0.62rem',color:'var(--muted)',fontWeight:400}}>Smart Finance Platform</div>
@@ -153,7 +156,7 @@ export default function Landing() {
       <footer>
         <div className="footer-text">© 2026 Riphah International University, Faisalabad — BSSE Final Year Project</div>
         <a className="nav-logo" href="#" style={{fontSize:'0.9rem'}}>
-          <div className="logo-icon" style={{width:28,height:28,fontSize:14}}>💰</div>
+          <div className="logo-icon" style={{width:28,height:28,fontSize:14}}></div>
           AI Personal Finance
         </a>
         <div className="footer-text">Waqar Ali · Muhammad Hamid · Zohaib Gulzar</div>

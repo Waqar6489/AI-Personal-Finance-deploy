@@ -26,7 +26,7 @@ export function Login() {
     <div className="auth-page">
       <div className="auth-box">
         <div className="auth-logo">
-          <div className="logo-icon">💰</div>
+          <div className="logo-icon"></div>
           AI Personal Finance
         </div>
         <div className="auth-title">Welcome back 👋</div>
@@ -46,7 +46,7 @@ export function Login() {
               onChange={e => setForm(p => ({...p, password: e.target.value}))} required />
           </div>
           <button className="btn btn-primary btn-full" type="submit" disabled={loading}>
-            {loading ? '⏳ Signing In...' : 'Sign In →'}
+            {loading ? 'Signing In...' : 'Sign In →'}
           </button>
         </form>
 
@@ -91,10 +91,10 @@ export function Register() {
     <div className="auth-page">
       <div className="auth-box">
         <div className="auth-logo">
-          <div className="logo-icon">💰</div>
+          <div className="logo-icon"></div>
           AI Personal Finance
         </div>
-        <div className="auth-title">Create Account 🎉</div>
+        <div className="auth-title">Create Account</div>
         <div className="auth-sub">Join thousands managing finances smarter</div>
 
         {error && <div className="alert alert-error">{error}</div>}
@@ -129,7 +129,7 @@ export function Register() {
             </div>
           </div>
           <button className="btn btn-primary btn-full" type="submit" disabled={loading}>
-            {loading ? '⏳ Creating Account...' : 'Create Account →'}
+            {loading ? 'Creating Account...' : 'Create Account →'}
           </button>
         </form>
 
