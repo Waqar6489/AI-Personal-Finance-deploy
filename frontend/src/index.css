@@ -1379,9 +1379,17 @@ select option {
     .nav {
         padding: 12px 20px;
     }
+    .btn{
+        padding: 6px 16px;
+        font-size: .6rem;
+    }
 
     .nav-links {
         display: none;
+    }
+    .tech-chips{
+        justify-content: center;
+        gap: 20px;
     }
 
     .sidebar {
@@ -1437,6 +1445,9 @@ select option {
     }
 
     .hero-stats {
+        gap: 24px;
+    }
+    .steps{
         gap: 24px;
     }
 
