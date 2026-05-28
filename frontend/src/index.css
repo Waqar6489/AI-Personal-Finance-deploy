@@ -548,7 +548,7 @@ section {
 .team-cards {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .team-card {
@@ -558,7 +558,7 @@ section {
     padding: 14px 18px;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 18px;
 }
 
 .team-avatar {
@@ -573,14 +573,18 @@ section {
     font-size: .85rem;
     flex-shrink: 0;
 }
-
+.team-info{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 .team-name {
     font-weight: 600;
-    font-size: .875rem;
+    font-size: 1.1rem;
 }
 
 .team-id {
-    font-size: .75rem;
+    font-size: .85rem;
     color: var(--muted);
 }
 

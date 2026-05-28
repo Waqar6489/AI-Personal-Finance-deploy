@@ -53,9 +53,9 @@ export function Login() {
         <div className="auth-switch">
           Don't have an account? <Link to="/register">Sign up free</Link>
         </div>
-        <div className="auth-demo">
+        {/* <div className="auth-demo">
           🔑 Demo Admin: <strong style={{cursor:'pointer',color:'var(--accent)'}} onClick={fillDemo}>admin@finance.pk / admin123</strong>
-        </div>
+        </div> */}
         <div style={{textAlign:'center',marginTop:'12px'}}>
           <Link to="/" style={{fontSize:'0.8rem',color:'var(--muted)',textDecoration:'none'}}>← Back to home</Link>
         </div>
@@ -121,7 +121,7 @@ export function Register() {
           <div className="form-row">
             <div className="form-group">
               <label className="form-label">Password</label>
-              <input className="form-input" type="password" placeholder="Min. 6 chars" value={form.password} onChange={set('password')} required />
+              <input className="form-input" type="password" placeholder="Min. 8 chars" value={form.password} onChange={set('password')} required />
             </div>
             <div className="form-group">
               <label className="form-label">Confirm</label>

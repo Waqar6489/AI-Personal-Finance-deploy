@@ -145,14 +145,20 @@ export default function Landing() {
               <p style={{fontSize:'0.75rem',color:'var(--muted)',textTransform:'uppercase',letterSpacing:'0.1em',marginBottom:'14px'}}>Development Team</p>
               <div className="team-cards">
                 {[
-                  {init:'WA', name:'Waqar Ali', id:'Roll No. 24421', bg:'linear-gradient(135deg,#6378ff,#8b5cf6)'},
-                  {init:'MH', name:'Muhammad Hamid', id:'Roll No. 25951', bg:'linear-gradient(135deg,#00e5c4,#06b6d4)'},
-                  {init:'ZG', name:'Zohaib Gulzar', id:'Roll No. 26183', bg:'linear-gradient(135deg,#ff6b9d,#f43f5e)'},
+                  {init:'WA', name:'Waqar Ali', id:'Full Stack Developer', bg:'linear-gradient(135deg,#6378ff,#8b5cf6)'},
+                  {init:'MH', name:'Muhammad Hamid', id:'Frontend Developer', bg:'linear-gradient(135deg,#00e5c4,#06b6d4)'},
+                  {init:'ZG', name:'Zohaib Gulzar', id:'HTML/CSS Developer', bg:'linear-gradient(135deg,#ff6b9d,#f43f5e)'},
                   {init:'MA', name:'Mam Mariam Afzal', id:'Supervisor', bg:'linear-gradient(135deg,#f59e0b,#d97706)', extra:{marginTop:'8px',background:'rgba(99,120,255,0.06)'}},
                 ].map((m, i) => (
                   <div key={i} className="team-card" style={m.extra}>
                     <div className="team-avatar" style={{background:m.bg}}>{m.init}</div>
-                    <div><div className="team-name">{m.name}</div><div className="team-id">{m.id}</div></div>
+                    <div className="team-info">
+                      <div className="team-name">
+                        {m.name}</div>
+                      <div className="team-id">
+                        {m.id}
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
