@@ -1,5 +1,12 @@
 import { Link } from 'react-router-dom';
 import { FaReact } from "react-icons/fa";
+import { SiDjango,SiPandas,SiNumpy,SiScikitlearn,SiMysql  } from "react-icons/si";
+import { MdBatchPrediction } from "react-icons/md";
+import { CiLock } from "react-icons/ci";
+import { TbTargetArrow } from "react-icons/tb";
+import { FaChartBar } from "react-icons/fa";
+import { CiMobile3 } from "react-icons/ci";
+import { FaRobot } from "react-icons/fa";
 
 
 
@@ -68,12 +75,12 @@ export default function Landing() {
           </div>
           <div className="features-grid">
             {[
-              {icon:'🤖', title:'AI-Powered Insights', desc:'Scikit-learn models analyze your spending patterns and generate personalized recommendations like "Reduce food spending by 10% to save Rs. 2,230."'},
-              {icon:'📊', title:'Visual Dashboard', desc:'Beautiful Chart.js-powered dashboards show your income, expenses, and savings trends at a glance, no spreadsheets needed.'},
-              {icon:'🎯', title:'Budget Tracking', desc:'Set monthly budgets per category and get real-time alerts when you\'re approaching your limits. Stay in control, always.'},
-              {icon:'🔮', title:'Expense Prediction', desc:'Our ML model forecasts next month\'s expenses based on your historical behavior, so you can plan ahead with confidence.'},
-              {icon:'🔒', title:'Secure & Private', desc:'Django backend with JWT auth, PBKDF2 password hashing, HTTPS/TLS, CSRF protection. Your data is encrypted and isolated.'},
-              {icon:'📱', title:'Responsive Design', desc:'Built with React for a seamless experience on mobile, tablet, and desktop. Manage your finances from anywhere.'},
+              {icon:<FaRobot />, title:'AI-Powered Insights', desc:'Scikit-learn models analyze your spending patterns and generate personalized recommendations like "Reduce food spending by 10% to save Rs. 2,230."'},
+              {icon:<FaChartBar />, title:'Visual Dashboard', desc:'Beautiful Chart.js-powered dashboards show your income, expenses, and savings trends at a glance, no spreadsheets needed.'},
+              {icon:<TbTargetArrow />, title:'Budget Tracking', desc:'Set monthly budgets per category and get real-time alerts when you\'re approaching your limits. Stay in control, always.'},
+              {icon:<MdBatchPrediction />, title:'Expense Prediction', desc:'Our ML model forecasts next month\'s expenses based on your historical behavior, so you can plan ahead with confidence.'},
+              {icon:<CiLock />, title:'Secure & Private', desc:'Django backend with JWT auth, PBKDF2 password hashing, HTTPS/TLS, CSRF protection. Your data is encrypted and isolated.'},
+              {icon:<CiMobile3 />, title:'Responsive Design', desc:'Built with React for a seamless experience on mobile, tablet, and desktop. Manage your finances from anywhere.'},
             ].map((f, i) => (
               <div key={i} className="feature-card">
                 <div className="feature-icon">{f.icon}</div>
@@ -114,8 +121,10 @@ export default function Landing() {
         <div className="tech-strip-inner">
           <span className="tech-label">Built With</span>
           <div className="tech-chips">
-            {['⚛️ React','🐍 Django','🔬 Scikit-learn','📈 Chart.js','🗄️ MySQL','🐼 Pandas','🔢 NumPy'].map(t => (
-              <span key={t} className="tech-chip">{t}</span>
+            {[<FaReact />, <SiDjango />, <SiScikitlearn />, <FaChartBar />, <SiMysql />, <SiPandas />, <SiNumpy />].map((icon, i) => (
+              <span key={i} className="tech-chip">
+                {icon}
+              </span>
             ))}
           </div>
         </div>

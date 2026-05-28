@@ -1,6 +1,14 @@
 import { useState } from 'react';
 import { Outlet, useNavigate, useLocation, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { IoExitOutline } from "react-icons/io5";
+import { CgProfile } from "react-icons/cg";
+import { FaMoneyBillWave } from "react-icons/fa";
+import { GiExpense } from "react-icons/gi";
+import { TbReportAnalytics } from "react-icons/tb";
+import { TbTargetArrow } from "react-icons/tb";
+import { FaHome } from "react-icons/fa";
+
 
 export default function DashboardLayout() {
   const { user, logout } = useAuth();
@@ -17,14 +25,14 @@ export default function DashboardLayout() {
   const isAdmin = user?.role === 'admin';
 
   const navItems = [
-    { to: '/dashboard', icon: '🏠', label: 'Overview', exact: true },
-    { to: '/dashboard/income', icon: '💵', label: 'Income' },
-    { to: '/dashboard/expenses', icon: '💸', label: 'Expenses' },
-    { to: '/dashboard/budget', icon: '🎯', label: 'Budget' },
+    { to: '/dashboard', icon: <FaHome />, label: 'Overview', exact: true },
+    { to: '/dashboard/income', icon: <FaMoneyBillWave />, label: 'Income' },
+    { to: '/dashboard/expenses', icon: <GiExpense />, label: 'Expenses' },
+    { to: '/dashboard/budget', icon: <TbTargetArrow />, label: 'Budget' },
   ];
   const aiItems = [
     { to: '/dashboard/insights', icon: '🤖', label: 'AI Insights' },
-    { to: '/dashboard/reports', icon: '📋', label: 'Reports' },
+    { to: '/dashboard/reports', icon: <TbReportAnalytics />, label: 'Reports' },
   ];
   const adminItems = isAdmin ? [
     { to: '/dashboard/admin', icon: '⚙️', label: 'Admin Panel' },
@@ -45,7 +53,7 @@ export default function DashboardLayout() {
       {/* SIDEBAR */}
       <aside className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
         <div className="sidebar-logo">
-          <div className="logo-icon">💰</div>
+          <div className="logo-icon"></div>
           <div>
             <div>AI Finance</div>
             <div style={{fontSize:'0.6rem',color:'var(--muted)',fontWeight:400}}>Personal Dashboard</div>
@@ -76,7 +84,7 @@ export default function DashboardLayout() {
           )}
           <div className="nav-group-label" style={{marginTop:'8px'}}>Account</div>
           <Link to="/dashboard/profile" className={`nav-item ${isActive('/dashboard/profile') ? 'active' : ''}`} onClick={closeSidebar}>
-            <span className="nav-icon">👤</span> Profile
+            <span className="nav-icon"><CgProfile /></span> Profile
           </Link>
         </nav>
         <div className="sidebar-bottom">
@@ -88,7 +96,7 @@ export default function DashboardLayout() {
             </div>
           </div>
           <button className="nav-item" onClick={handleLogout} style={{color:'var(--red)'}}>
-            <span className="nav-icon">🚪</span> Logout
+            <span className="nav-icon"><IoExitOutline /></span> Logout
           </button>
         </div>
       </aside>

@@ -3,6 +3,8 @@ import { Chart, registerables } from 'chart.js';
 import API from '../api/axios';
 import { toast } from '../components/shared/Toast';
 
+
+
 Chart.register(...registerables);
 const fmt = (n) => `Rs. ${Number(n||0).toLocaleString('en-PK',{minimumFractionDigits:0,maximumFractionDigits:0})}`;
 const CATS = ['Food','Transport','Utilities','Healthcare','Entertainment','Education','Other'];

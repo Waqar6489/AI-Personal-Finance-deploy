@@ -500,28 +500,30 @@ section {
 }
 
 .tech-label {
-    font-size: .72rem;
+    font-size: 1.5rem;
     color: var(--muted);
     text-transform: uppercase;
     letter-spacing: .1em;
 }
 
 .tech-chips {
+    
     display: flex;
-    gap: 8px;
+    gap: 35px;
     flex-wrap: wrap;
 }
 
 .tech-chip {
+    
     padding: 6px 14px;
     border-radius: 6px;
     background: var(--card);
     border: 1px solid var(--border);
-    font-size: .8rem;
+    font-size: 1.5rem;
     color: var(--muted);
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 10px;
 }
 
 .about {
