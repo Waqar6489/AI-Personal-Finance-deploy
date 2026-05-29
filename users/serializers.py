@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate
 from .models import User
 
 class RegisterSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(write_only=True, min_length=6)
+    password = serializers.CharField(write_only=True, min_length=8)
     password2 = serializers.CharField(write_only=True)
 
     class Meta:
@@ -48,7 +48,7 @@ class ProfileUpdateSerializer(serializers.ModelSerializer):
 
 class ChangePasswordSerializer(serializers.Serializer):
     old_password = serializers.CharField()
-    new_password = serializers.CharField(min_length=6)
+    new_password = serializers.CharField(min_length=8)
 
     def validate_old_password(self, value):
         user = self.context['request'].user
