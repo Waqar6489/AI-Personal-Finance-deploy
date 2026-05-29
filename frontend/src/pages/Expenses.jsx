@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react';
 import API from '../api/axios';
 import { toast } from '../components/shared/Toast';
+import { MdDelete } from "react-icons/md";
+
 
 const CATS = ['Food','Transport','Utilities','Healthcare','Entertainment','Education','Other'];
 const CAT_EMOJI = {Food:'🍔',Transport:'🚗',Utilities:'💡',Healthcare:'🏥',Entertainment:'🎭',Education:'📚',Other:'📦'};
@@ -114,7 +116,7 @@ export function Expenses() {
                 <td><span className="cat-pill" style={{background:CAT_COLORS[r.category]+'22',color:CAT_COLORS[r.category].replace(',0.8','')}}>{CAT_EMOJI[r.category]} {r.category}</span></td>
                 <td style={{color:'var(--muted)'}}>{r.description||'-'}</td>
                 <td style={{color:'var(--red)',fontWeight:600}}>- {fmt(r.amount)}</td>
-                <td><div style={{display:'flex',gap:'6px'}}><button className="btn btn-ghost btn-sm" onClick={()=>startEdit(r)}>✏️</button><button className="btn btn-danger btn-sm" onClick={()=>deleteRecord(r.id)}>🗑️</button></div></td>
+                <td><div style={{display:'flex',gap:'6px'}}><button className="btn btn-ghost btn-sm" onClick={()=>startEdit(r)}>✏️</button><button className="btn btn-danger btn-sm" onClick={()=>deleteRecord(r.id)}><MdDelete /></button></div></td>
               </tr>
             ))}</tbody>
           </table>

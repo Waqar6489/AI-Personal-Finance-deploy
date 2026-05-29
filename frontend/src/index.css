@@ -719,6 +719,9 @@ footer {
     outline: none;
     transition: border-color .2s;
 }
+/* .form-input[type="date"]{
+color: white
+} */
 
 .form-input:focus {
     border-color: var(--accent);
@@ -810,7 +813,7 @@ select option {
 }
 
 .nav-group-label {
-    font-size: .63rem;
+    font-size: .73rem;
     text-transform: uppercase;
     letter-spacing: .12em;
     color: var(--muted);
@@ -851,7 +854,9 @@ select option {
 .nav-icon {
     width: 20px;
     text-align: center;
+    color: white ;
     flex-shrink: 0;
+    font-size: 1.1rem;
 }
 
 .sidebar-bottom {

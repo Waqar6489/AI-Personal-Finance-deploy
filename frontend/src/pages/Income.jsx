@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import API from '../api/axios';
 import { toast } from '../components/shared/Toast';
+import { MdDelete } from "react-icons/md";
+import { LuBriefcaseBusiness } from "react-icons/lu";
+
 
 const SOURCES = ['Salary','Freelance','Business','Investment','Rental','Other'];
 const today = () => new Date().toISOString().split('T')[0];
@@ -119,7 +122,7 @@ export default function Income() {
         <div className="kpi-grid" style={{marginBottom:'20px'}}>
           {Object.entries(summary.by_source).map(([src, amt]) => (
             <div key={src} className="kpi-card">
-              <div className="kpi-label">💼 {src}</div>
+              <div className="kpi-label"><LuBriefcaseBusiness /> {src}</div>
               <div className="kpi-val" style={{fontSize:'1.4rem',color:'var(--green)'}}>{fmt(amt)}</div>
             </div>
           ))}
@@ -150,13 +153,13 @@ export default function Income() {
               {records.map(r => (
                 <tr key={r.id}>
                   <td style={{color:'var(--muted)'}}>{new Date(r.date+'T00:00:00').toLocaleDateString('en-PK',{day:'numeric',month:'short',year:'numeric'})}</td>
-                  <td><span className="cat-pill" style={{background:'rgba(34,197,94,0.12)',color:'var(--green)'}}>💼 {r.source}</span></td>
+                  <td><span className="cat-pill" style={{background:'rgba(34,197,94,0.12)',color:'var(--green)'}}><LuBriefcaseBusiness /> {r.source}</span></td>
                   <td style={{color:'var(--muted)'}}>{r.description || '-'}</td>
                   <td style={{color:'var(--green)',fontWeight:600}}>+ {fmt(r.amount)}</td>
                   <td>
                     <div style={{display:'flex',gap:'6px'}}>
                       <button className="btn btn-ghost btn-sm" onClick={()=>startEdit(r)}>✏️</button>
-                      <button className="btn btn-danger btn-sm" onClick={()=>deleteRecord(r.id)}>🗑️</button>
+                      <button className="btn btn-danger btn-sm" onClick={()=>deleteRecord(r.id)}><MdDelete /></button>
                     </div>
                   </td>
                 </tr>

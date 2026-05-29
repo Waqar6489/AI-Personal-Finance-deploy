@@ -231,7 +231,7 @@ export function Profile() {
         <div className="form-card-title">🔐 Change Password</div>
         <form onSubmit={changePass}>
           <div className="form-group"><label className="form-label">Current Password</label><input className="form-input" type="password" value={passForm.old_password} onChange={e=>setPassForm(p=>({...p,old_password:e.target.value}))} required /></div>
-          <div className="form-group"><label className="form-label">New Password (min. 6 chars)</label><input className="form-input" type="password" value={passForm.new_password} onChange={e=>setPassForm(p=>({...p,new_password:e.target.value}))} required /></div>
+          <div className="form-group"><label className="form-label">New Password (min. 8 chars)</label><input className="form-input" type="password" value={passForm.new_password} onChange={e=>setPassForm(p=>({...p,new_password:e.target.value}))} required /></div>
           <button className="btn btn-ghost" type="submit" disabled={changingPass}>{changingPass?'⏳ Changing...':'🔐 Change Password'}</button>
         </form>
       </div>
